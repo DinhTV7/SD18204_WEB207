@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>Các thành phần quan trọng của Bootstrap</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./image/FPT_Polytechnic.png" alt="" width="100px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">DinhTV7</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Đẹp trai</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Slide ảnh -->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner" style="height: 80vh">
+                <div class="carousel-item active">
+                    <img src="./image/20230426 Ba Vi 0100 _5.JPG" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./image/20230426 Ba Vi 0190 _5.JPG" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./image/20230426 Ba Vi Hoya 0006 _5.JPG" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Image -->
+        <img src="./image/20230426 Ba Vi Hoya 0006 _5.JPG" alt="" class="rounded w-50 my-4">
+
+        <!-- Thông báo -->
+        <div class="alert alert-success" role="alert">
+            Thêm mới thành công!
+        </div>
+        <div class="alert alert-danger" role="alert">
+            Thêm mới thất bại!
+        </div>
+        <div class="alert alert-warning" role="alert">
+            Thêm mới thất bại!
+        </div>
+
+        <!-- Trạng thái -->
+        <span class="badge rounded-pill bg-success">Đang hoạt động</span>
+        <span class="badge rounded-pill bg-danger">Ngừng hoạt động</span>
+
+        <!-- Button -->
+        <!-- Loại 1: Có backgroud -->
+        <button type="button" class="btn btn-success">Thên</button>
+        <button type="button" class="btn btn-warning">Sửa</button>
+        <button type="button" class="btn btn-danger">Xóa</button>
+        <!-- Loại 2: Không có bg -->
+        <button type="button" class="btn btn-outline-success">Thên</button>
+        <button type="button" class="btn btn-outline-warning">Sửa</button>
+        <button type="button" class="btn btn-outline-danger">Xóa</button>
+        <!-- Loại 3: Groub button -->
+        <div class="btn-group-vertical" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-danger">Xóa</button>
+            <button type="button" class="btn btn-warning">Sửa</button>
+            <button type="button" class="btn btn-success">Thêm</button>
+        </div>
+
+        <!-- Table -->
+        <table class="table table-striped table-hover">
+            <thead>
+                <th>STT</th>
+                <th>Họ và tên</th>
+                <th>Chức vụ</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>DinhTV7</td>
+                    <td>GV</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>DinhTV7</td>
+                    <td>GV</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>DinhTV7</td>
+                    <td>GV</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>DinhTV7</td>
+                    <td>GV</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Form-->
+        <form action="" class="mb-5">
+            <label for="" class="form-label">Họ và tên: </label>
+            <input type="text" name="" id="" class="form-control">
+        </form>
+    </div>
+</body>
+
+</html>
