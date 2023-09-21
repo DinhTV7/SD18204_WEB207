@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS</title>
+    <!-- Nhúng thư viện -->
+    <script src="./libs/angular.min.js"></script>
+</head>
+<!-- Để khởi tạo 1 chương trình, đầu tiên chúng ta cần định nghĩa vùng sử dụng angularjs -->
+<!-- ng-app: dùng để định nghĩa vùng sử dụng angularjs -->
+<body ng-app="myNYC">
+    <div ng-controller="demoController">
+        <h1>{{ xinchao }}</h1>
+    </div>
+    <!-- 
+        Khởi tạo 1 vùng controller mới
+        Khai báo và hiển thị ra tên, năm sinh, chuyên ngành
+     -->
+    <div ng-controller="infoController">
+        <h1>{{ name }}</h1>
+        <h1>{{ year }}</h1>
+        <!-- <h1>{{ chuyennganh }}</h1> -->
+        <h1 ng-bind="chuyennganh"></h1>
+
+        <h1>Danh sách sinh viên</h1>
+        <table border="1">
+            <tr>
+                <td>Tên</td>
+                <td>Năm Sinh</td>
+                <td>Chuyên ngành</td>
+            </tr>
+            <tr>
+                <td>{{ students[0].ten }}</td>
+                <td>{{ students[0].namsinh }}</td>
+                <td>{{ students[0].chuyennganh }}</td>
+            </tr>
+            <tr>
+                <td>{{ students[1].ten }}</td>
+                <td>{{ students[1].namsinh }}</td>
+                <td>{{ students[1].chuyennganh }}</td>
+            </tr>
+        </table>
+
+        <h1>Danh sách sinh viên 2</h1>
+        <table border="1">
+            <tr>
+                <td>Tên</td>
+                <td>Năm Sinh</td>
+                <td>Chuyên ngành</td>
+            </tr>
+            <tr ng-repeat="item in students">
+                <td>{{ item.ten }}</td>
+                <td>{{ item.namsinh }}</td>
+                <td>{{ item.chuyennganh }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<!-- Nhúng trực tiếp -->
+<script>
+    
+</script>
+
+<!-- Liên kết ngoài -->
+<script src="./js/buoi5.js"></script>
+</html>
