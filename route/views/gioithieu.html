@@ -1,3 +1,30 @@
 <div>
     <h1 class="text-danger">{{ title }}</h1>
+    <h1>Danh sách sinh viên</h1>
+    <table class="table">
+        <tr>
+            <td>Tên</td>
+            <td>Năm Sinh</td>
+            <td>Chuyên ngành</td>
+        </tr>
+        <tr ng-repeat="item in students">
+            <td>{{ item.ten }}</td>
+            <td>{{ item.namsinh }}</td>
+            <td>{{ item.chuyennganh }}</td>
+        </tr>
+    </table>
+
+    <h2>Thêm sinh viên</h2>
+    <form ng-submit="createStudent()">
+        <label for="" class="form-label">Họ và tên:</label>
+        <input type="text" class="form-control" ng-model="student.name">
+
+        <label for="" class="form-label">Năm sinh:</label>
+        <input type="text" class="form-control" ng-model="student.year">
+
+        <label for="" class="form-label">Chuyên ngành:</label>
+        <input type="text" class="form-control" ng-model="student.couse">
+
+        <button type="submit" class="btn btn-success">Thêm mới</button>
+    </form>
 </div>

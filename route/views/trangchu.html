@@ -1,3 +1,59 @@
 <div>
     <h1 class="text-success">{{ title }}</h1>
+
+    <!-- Sự kiện ng-click -->
+    <h2>Thêm mới thông tin</h2>
+    <form ng-submit="themMoi()">
+        <label for="" class="form-label">Họ và tên:</label>
+        <input type="text" class="form-control" ng-model="inputValue.name">
+
+        <label for="" class="form-label">Địa chỉ:</label>
+        <input type="text" class="form-control" ng-model="inputValue.address">
+
+        <button type="submit" class="btn btn-success mt-3">Thêm mới</button>
+    </form>
+
+    <!-- 
+        Bài 1: Tạo 1 form điền vào 2 số
+        Thực hiện việc tính tổng 2 số và hiển thị ra màn hình
+     -->
+    <h2>Bài 1: Tính tổng</h2>
+    <form ng-submit="tinhTong()">
+        <label for="" class="form-label">Số thứ nhất:</label>
+        <input type="text" class="form-control" ng-model="number.one">
+
+        <label for="" class="form-label">Số thứ 2:</label>
+        <input type="text" class="form-control" ng-model="number.two">
+
+        <button type="submit" class="btn btn-success mt-3">Tính tổng</button>
+    </form>
+    <p ng-if="sum">Tổng của 2 số là: {{ sum }}</p>
+
+    <!-- 
+        Bài 2: Tạo 1 form đăng nhập username, password
+        Nếu nhập đúng pass là thaydinhdz thì hiển thị
+        "Xin chào + username" (ng-show)
+
+        Nếu nhập sai thì hiển thị thông báo (alert)
+        "Bạn đã nhập sai mật khẩu"
+     -->
+     <form ng-submit="dangNhap()">
+        <label for="" class="form-label">Tên đăng nhập:</label>
+        <input type="text" class="form-control" ng-model="account.user_name">
+
+        <label for="" class="form-label">Mật khẩu:</label>
+        <input type="text" class="form-control" ng-model="account.pass_word">
+
+        <button type="submit" class="btn btn-success mt-3">Đăng nhập</button>
+    </form> 
+    <p ng-show="flag">Xin chào {{ account.user_name }}</p>
+    <!-- 
+        Bài 3: Tạo 1 nút (ng-click), 
+        nếu click vào nút >= 5 lần sẽ hiển thị cảnh báo
+    -->
+    <button class="btn btn-secondary my-5" ng-click="dem()" ng-if="count < 5">Đếm</button>
+    <p ng-if="count >= 5" class="text-danger">Bạn đã ấn vào nút 5 lần</p>
+    <ul ng-show="count > 0">
+        <li>{{ count }}</li>
+    </ul>
 </div>
