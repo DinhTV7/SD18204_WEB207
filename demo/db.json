@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "dinhtv7",
+      "author": "dz"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "students": [
+    {
+      "id": 1,
+      "ten": "Tạ Văn Định",
+      "namsinh": 2005,
+      "chuyennganh": "CNTT"
+    },
+    {
+      "id": 2,
+      "ten": "DinhTV7",
+      "namsinh": 2005,
+      "chuyennganh": "CNTT"
+    }
+  ]
+}

@@ -24,7 +24,7 @@ window.GioiThieuController = function ($scope, $routeParams) {
             namsinh: $scope.student.year,
             chuyennganh: $scope.student.couse
         }
-    /////////////////////////////////////
+        
         console.log(newStudent);
         $scope.students.push(newStudent);
     }
