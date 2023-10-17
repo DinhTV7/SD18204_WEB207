@@ -8,14 +8,32 @@ window.ListStudentController = function ($scope, $http) {
 
     // Tham số $http (là giao thức để thực hiện việc call api)
     // $http.phương thức sử dụng(link api).then()
-    $http.get(apiStudents).then(function (response) {
-        console.log(response);
+    function getData () {
+        $http.get(apiStudents).then(function (response) {
+            console.log(response);
+    
+            // Truy cập vào dữ liệu
+            console.log(response.data);
+    
+            if (response.status == 200) {
+                $scope.listStudents = response.data;
+            }
+        })
+    }
+    getData();
 
-        // Truy cập vào dữ liệu
-        console.log(response.data);
-
-        if (response.status == 200) {
-            $scope.listStudents = response.data;
+    $scope.deleteStudent = function (deleteID) {
+        if (deleteID) {
+            let confirm = window.confirm("Bạn có chắc chắn xóa hay không?");
+            if (confirm) {
+                $http.delete(
+                    `${apiStudents}/${deleteID}`
+                ).then( function (response) {
+                    if (response.status == 200) {
+                        alert("Xóa thành công");
+                    }
+                })
+            }
         }
-    })
+    }
 }

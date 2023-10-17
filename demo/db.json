@@ -29,10 +29,10 @@
       "chuyennganh": "CNTT"
     },
     {
-      "id": 2,
-      "ten": "DinhTV7",
+      "ten": "DinhTV7 ĐZ",
       "namsinh": 2005,
-      "chuyennganh": "CNTT"
+      "chuyennganh": "CNTT",
+      "id": 2
     },
     {
       "ten": "ádasdasdad",
@@ -45,12 +45,6 @@
       "namsinh": "2005",
       "chuyennganh": "CNTT",
       "id": 4
-    },
-    {
-      "ten": "adsasdad",
-      "namsinh": "ádsadad",
-      "chuyennganh": "ádasd",
-      "id": 5
     }
   ]
 }

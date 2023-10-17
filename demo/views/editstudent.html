@@ -1,0 +1,29 @@
+<div class="card my-5">
+    <h5 class="card-header">{{ title }}</h5>
+    <div class="card-body">
+        <form ng-submit="editStudent()">
+            <label for="" class="form-label">Họ và tên:</label>
+            <input type="text" class="form-control" ng-model="student.name">
+            <div ng-if="kiemTra.name" class="text-danger">
+                Vui lòng nhập họ tên !
+            </div>
+
+            <label for="" class="form-label">Năm sinh:</label>
+            <input type="text" class="form-control" ng-model="student.year">
+            <div ng-if="kiemTra.year" class="text-danger">
+                Vui lòng nhập năm sinh !
+            </div>
+
+            <label for="" class="form-label">Chuyên ngành:</label>
+            <input type="text" class="form-control" ng-model="student.couse">
+            <div ng-if="kiemTra.couse" class="text-danger">
+                Vui lòng nhập chuyên ngành !
+            </div>
+
+            <div class="text-center mt-3">
+                <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                <button type="submit" class="btn btn-warning">Sửa</button>
+            </div>
+        </form>
+    </div>
+</div>
