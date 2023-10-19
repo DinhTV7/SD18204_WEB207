@@ -23,10 +23,10 @@
   },
   "students": [
     {
-      "id": 1,
-      "ten": "Tạ Văn Định",
+      "ten": "Tạ Văn Định đẹp trai",
       "namsinh": 2005,
-      "chuyennganh": "CNTT"
+      "chuyennganh": "CNTT",
+      "id": 1
     },
     {
       "ten": "DinhTV7 ĐZ",
